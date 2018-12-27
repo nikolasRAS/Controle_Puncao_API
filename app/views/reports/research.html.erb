@@ -1,0 +1,91 @@
+<h1 class="text-center"><%= "#{t('link.report.one')} referente ao período de #{l(params[:begin].to_date)} a #{l(params[:end].to_date)}" %></h1>
+
+<br>
+
+<table class="table table-hover text-center">
+  <thead>
+    <tr>
+      <th>Total</th>
+      <th><%= @total %></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  <thead>
+    <tr>
+      <th colspan="2">Punções por Faixa Etária</th>
+    </tr>
+    <tr>
+      <th >Faixa Etária</th>
+      <th >Quantidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adulto</td>
+      <td><%= @count_adult %></td>
+    </tr>
+    <tr>
+      <td>Criança</td>
+      <td><%= @count_child %></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th colspan="2">Punções por Colaborador</th>
+    </tr>
+    <tr>
+      <th> <%= t('view.worker.other')%> </th>
+      <th>Quantidade de punções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @workers_list.each do |worker| %>    
+      <tr>
+        <td><%= worker[:description] %></td>        
+        <td><%= worker[:qtde] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <thead>
+    <tr>
+      <th><%= t('view.worker.other')%> </th>
+      <th>1ª</th>
+      <th>2ª</th>
+      <th>3ª</th>
+      <th>4ª</th>
+      <th>5ª+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @workers_list.each do |worker| %>    
+      <tr>
+        <td><%= worker[:description] %></td>        
+        <td><%= worker[:try_1] %></td>
+        <td><%= worker[:try_2] %></td>
+        <td><%= worker[:try_3] %></td>
+        <td><%= worker[:try_4] %></td>
+        <td><%= worker[:try_5] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <thead>
+    <tr>
+      <th colspan="2">Punções por Observação</th>
+    </tr>
+    <tr>
+      <th> <%= t('view.obs.other')%> </th>
+      <th>Quantidade de punções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @obs_list.each do |observation| %>    
+      <tr>
+        <td><%= observation[:description] %></td>        
+        <td><%= observation[:qtde] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to t('link.back'), reports_path %></p>

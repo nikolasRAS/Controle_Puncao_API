@@ -1,0 +1,15 @@
+<h1><%= t('view.attempt.edit')%></h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('view.attribute.d_puncture.other')%></strong>
+  <%= @attempt.d_puncture %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.try.other')%></strong>
+  <%= @attempt.try %>
+</p>
+
+<%= link_to 'Edit', edit_attempt_path(@attempt) %> |
+<%= link_to 'Back', attempts_path %>

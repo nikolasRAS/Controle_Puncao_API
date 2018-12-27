@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= Worker.model_name.human(count: 2) %></h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t('view.attribute.description.one')%></th>
+      <th><%= t('view.attribute.active.one')%></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workers.each do |worker| %>
+      <tr>
+        <td><%= worker.description %></td>
+        <td><%= worker.active ? check_box('a','b', {checked: true}) : check_box('a','b', {checked: false}) %></td>
+        <td><%= link_to t('link.show'), worker %></td>
+        <td><%= link_to t('link.edit'), edit_worker_path(worker) %></td>
+        <td><%= link_to t('link.destroy'), worker, method: :delete, data: { confirm: t('link.sure') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('view.worker.new'), new_worker_path, class:"btn btn-primary", role:"button" %> |
+<%= link_to t('link.back_index'), welcome_index_path, class:"btn btn-secondary", role:"button" %>

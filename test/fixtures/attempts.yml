@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  record: one
+  d_puncture: 2018-11-23
+  worker: one
+  try: 1
+  observation: one
+
+two:
+  record: two
+  d_puncture: 2018-11-23
+  worker: two
+  try: 1
+  observation: two

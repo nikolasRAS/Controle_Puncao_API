@@ -1,0 +1,6 @@
+<h1><%= t('view.record.edit')%></h1>
+
+<%= render 'form', record: @record %>
+
+<%= link_to t('link.show'), @record %> |
+<%= link_to t('link.back'), records_path %>

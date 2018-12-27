@@ -1,0 +1,42 @@
+<%= form_with(model: attempt, local: true) do |form| %>
+  <% if attempt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attempt.errors.count, "error") %> prohibited this attempt from being saved:</h2>
+
+      <ul>
+      <% attempt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :record_id %>
+    <%= form.select("record_id", @record_options, {include_blank: t('view.attribute.select')}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :d_puncture %>
+    <%= form.date_select :d_puncture %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :worker_id %>
+    <%= form.select("worker_id", @worker_options, {include_blank: t('view.attribute.select')}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :try %>
+    <%= form.number_field :try %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :observation_id %>
+    <%= form.select("observation_id", @observation_options, {include_blank: t('view.attribute.select')}) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

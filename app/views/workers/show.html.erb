@@ -1,0 +1,16 @@
+<h1><%= t('view.worker.show')%></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('view.attribute.description.other')%></strong>
+  <%= @worker.description %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.active.other')%></strong>
+  <%= @worker.active ? check_box('a','b', {checked: true}) : check_box('a','b', {checked: false}) %>
+</p>
+
+<%= link_to t('link.edit'), edit_worker_path(@worker) %> |
+<%= link_to t('link.back'), workers_path %>

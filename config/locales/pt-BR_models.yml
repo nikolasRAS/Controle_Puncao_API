@@ -1,0 +1,59 @@
+pt-BR:
+  activerecord:
+    models:
+      worker: 
+        one: Coletor
+        other: Coletores
+      age_range:
+        one: Faixa Etária
+        other: Faixas Etárias
+      attempt:
+        one: Tentativa
+        other: Tentativas
+      observation:
+        one: Observação
+        other: Observações
+      record:
+        one: Registro
+        other: Registros
+    attributes:
+      worker:
+        id: Código
+        description: Descrição        
+        active: Ativo
+        updated_at: Atualizado em
+        created_at: Criado em
+      age_range:
+        id: Código
+        description: Descrição        
+        updated_at: Atualizado em
+        created_at: Criado em
+      attempt:
+        id: Código
+        record_id: Protocolo
+        record: Protocolo
+        d_puncture: Data
+        worker_id: Coletor
+        worker: Coletor
+        try: Tentativa
+        observation_id: Observação
+        observation: Observação
+        description: Descrição
+        updated_at: Atualizado em
+        created_at: Criado em
+      observation:
+        id: Código
+        description: Descrição        
+        updated_at: Atualizado em
+        created_at: Criado em
+      record:
+        id: Código
+        date_s: Data
+        protocol: Protocolo
+        patient: Paciente
+        age_range_id: Faixa Etária
+        age_range: Faixa Etária
+        age: Idade
+        description: Descrição        
+        updated_at: Atualizado em
+        created_at: Criado em      

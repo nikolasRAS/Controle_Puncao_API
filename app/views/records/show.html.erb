@@ -1,0 +1,38 @@
+<h1><%= t('view.record.show')%></h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('view.attribute.date_s.other')%></strong>
+  <%= l(@record.date_s) %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.protocol.other')%></strong>
+  <%= @record.protocol %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.patient.other')%></strong>
+  <%= @record.patient %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.age_range.other')%></strong>
+  <%= @record.age_range.description %>
+</p>
+
+
+<p>
+  <strong><%= t('view.attribute.age.other')%></strong>
+  <%= @record.age %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.try.other') %></strong>
+  <%= Attempt.where("record_id = ?", @record.id) %>
+</P>
+
+<%= link_to t('link.edit'), edit_record_path(@record) %> |
+<%= link_to t('link.add_attempt'), attempts_protocol_path(@record.id) %> |
+<%= link_to t('link.back'), records_path %>
+

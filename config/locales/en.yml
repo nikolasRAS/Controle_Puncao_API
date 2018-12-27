@@ -1,0 +1,100 @@
+en:
+# Avulsos
+  puncture_controller:
+    one: Puncture Control
+    other: Puncture Control
+# traduções usadas no Task  
+  dev:
+    destroy_db: Delete the old BD
+    create_db: Create a new BD
+    migrate_db: Migrate tables to the new BD
+    finished: Success!
+    child: Child
+    adult: Adult
+    create_age_range:
+      one: Create Age Range
+      other: Create Age Ranges    
+# Traduções utilizadas nos links
+  link:
+    new_worker: Register of Collectors
+    new_obs: Register of Observations
+    new_puncture: Register of Punctures
+    report:
+      one: Report
+      other: Reports
+    add_attempt: Add new try
+    show: Show
+    edit: Edit
+    destroy: Delete
+    back: Back
+    back_index: Index
+    sure: Are you sure?
+    research_reports: Search Reports
+# Traduções utilizadas nas Views
+  view:
+    worker:
+      one: Collector
+      other: Collectors
+      edit: Editing Collector
+      new: New Collector
+      show: Showing Collector
+    age_range:
+      one: Age Range
+      other: Age Ranges
+      edit: Editing Age Range
+      new: New Age Range
+      show: Showing Age Range
+    attempt:
+      one: Puncture
+      other: Punctures
+      edit: Editing Puncture
+      new: New Puncture
+      show: Showing Puncture
+    record:
+      one: Record
+      other: Records
+      edit: Editing Record
+      new: New Record
+      show: Showing Record
+    obs:
+      one: Observation
+      other: Observations 
+      edit: Editing Observation
+      new: New Observation
+      show: Showing Observation
+    attribute:
+      description:
+        one: Description      
+        other: "Description:"
+      d_puncture:
+        one: Date
+        other: "Date:"
+      date_s:
+        one: Date
+        other: "Date:"
+      try:
+        one: Try
+        other: "Try:"
+      patient:
+        one: Patient
+        other: "Patient:"
+      protocol:
+        one: Protocolo
+        other: "Protocolo:"
+      age:
+        one: Age
+        other: "Age:"
+      select: "Select one..."
+      age_range:
+        one: Age Range
+        other: "Age Range:"
+  controller:
+    create:
+      one: Created with success!
+      other: Created with success!
+    destroy:
+      one: Deleted with success!
+      other: Deleted with success!
+    update:
+      one: Updated with success!
+      other: Updated with success!

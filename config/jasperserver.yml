@@ -1,0 +1,14 @@
+development:
+  url: 'http://10.37.8.234:8080/jasperserver/services/repository'
+  username: 'uniadmin'
+  password: 'itunimed171@'
+
+test:
+  url: 'http://10.37.8.234:8080/jasperserver/services/repository'
+  username: 'uniadmin'
+  password: 'itunimed171@'
+
+production:
+  url: 'http://10.37.8.234:8080/jasperserver/services/repository'
+  username: 'uniadmin'
+  password: 'itunimed171@'
