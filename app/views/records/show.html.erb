@@ -29,7 +29,7 @@
 
 <p>
   <strong><%= t('view.attribute.try.other') %></strong>
-  <%= Attempt.where("record_id = ?", @record.id) %>
+  <%= @try %>
 </P>
 
 <%= link_to t('link.edit'), edit_record_path(@record) %> |

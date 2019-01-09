@@ -11,6 +11,7 @@ class RecordsController < ApplicationController
   # GET /records/1
   # GET /records/1.json
   def show
+    @try = Attempt.where("record_id = ?", @record.id).count
   end
 
   # GET /records/new

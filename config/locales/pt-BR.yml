@@ -74,7 +74,7 @@ pt-BR:
         other: "Data:"
       try:
         one: Tentativa
-        other: "Tentativa:"
+        other: "Tentativas:"
       patient:
         one: Paciente
         other: "Pacinte:"
