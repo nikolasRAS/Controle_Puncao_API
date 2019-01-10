@@ -1,15 +1,25 @@
-<h1><%= t('view.attempt.edit')%></h1>
+<h1><%= t('view.attempt.show')%></h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong><%= t('view.attribute.d_puncture.other')%></strong>
-  <%= @attempt.d_puncture %>
+  <strong><%= t('view.attribute.protocol.other')%></strong>
+  <%= @attempt.record.protocol %>
 </p>
 
 <p>
-  <strong><%= t('view.attribute.try.other')%></strong>
-  <%= @attempt.try %>
+  <strong><%= t('view.attribute.d_puncture.other')%></strong>
+  <%= l(@attempt.d_puncture) %>
 </p>
 
-<%= link_to 'Edit', edit_attempt_path(@attempt) %> |
-<%= link_to 'Back', attempts_path %>
+<p>
+  <strong><%= t('view.attribute.worker.other')%></strong>
+  <%= @attempt.worker.description %>
+</p>
+
+<p>
+  <strong><%= t('view.attribute.observation.other')%></strong>
+  <%= @attempt.observation.description %>
+</p>
+
+<%= link_to t('link.edit'), edit_attempt_path(@attempt), class:"btn btn-primary", role:"button" %> |
+<%= link_to t('link.back'), attempts_path, class:"btn btn-secondary", role:"button" %>

@@ -25,11 +25,6 @@
     <%= form.label :worker_id %>
     <%= form.select("worker_id", @worker_options, {include_blank: t('view.attribute.select')}) %>
   </div>
-
-  <div class="field">
-    <%= form.label :try %>
-    <%= form.number_field :try %>
-  </div>
   
   <div class="field">
     <%= form.label :observation_id %>

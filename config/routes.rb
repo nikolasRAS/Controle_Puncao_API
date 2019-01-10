@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   #get 'reports/research'
   get '/reports/research(/:begin)(/:end)', to: 'reports#research', as: 'research'
+  get 'index_search', to: 'records#index_search', as: 'search'
   #get 'report/index'
   #get 'reports', controller: 'reports', action: 'index'
   #get 'reports/:date_end', controller: 'reports', action: 'show'

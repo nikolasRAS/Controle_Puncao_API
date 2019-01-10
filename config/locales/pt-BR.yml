@@ -17,12 +17,13 @@ pt-BR:
 # Traduções utilizadas nos links
   link:
     new_worker: Cadastro de Coletores
-    new_obs: Cadastro de observações
-    new_puncture: Cadastro de punções
+    new_obs: Cadastro de Observações
+    new_record: Cadastro de Registro
+    new_puncture: Cadastro de Punção
     report:
       one: Relatório
       other: Relatórios
-    add_attempt: Adicionar Tentativa
+    add_attempt: Adicionar Punção
     show: Mostrar
     edit: Editar
     destroy: Deletar
@@ -73,8 +74,8 @@ pt-BR:
         one: Data
         other: "Data:"
       try:
-        one: Tentativa
-        other: "Tentativas:"
+        one: Punção
+        other: "Punçãos:"
       patient:
         one: Paciente
         other: "Pacinte:"

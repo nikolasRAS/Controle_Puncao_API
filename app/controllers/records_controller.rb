@@ -4,8 +4,16 @@ class RecordsController < ApplicationController
 
   # GET /records
   # GET /records.json
-  def index
+  def index    
+    @i = 0
+    @search = RecordSearch.new(params[:search])
+    @records = @search.scope
     @records = Record.all
+  end
+  
+  def index_search
+    @search = RecordSearch.new(params[:search])
+    @records = @search.scope
   end
 
   # GET /records/1

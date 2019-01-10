@@ -1,6 +1,7 @@
 <h1><%= t('view.attempt.edit')%></h1>
 
 <%= render 'form', attempt: @attempt %>
+<br>
 
-<%= link_to t('link.show'), @attempt %> |
-<%= link_to t('link.back'), attempts_path %>
+<%= link_to t('link.show'), @attempt, class:"btn btn-primary", role:"button" %> |
+<%= link_to t('link.back'), attempts_path, class:"btn btn-secondary", role:"button" %>
