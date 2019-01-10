@@ -1,6 +1,7 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:show, :edit, :update, :destroy]
   before_action :set_age_range_options, only: [:new, :create, :edit, :update]
+  before_action :set_attempt, only: [:show]
 
   # GET /records
   # GET /records.json
@@ -75,6 +76,10 @@ class RecordsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_record
       @record = Record.find(params[:id])
+    end
+    
+    def set_attempt
+      @attempts = Attempt.where("record_id = ?", @record.id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

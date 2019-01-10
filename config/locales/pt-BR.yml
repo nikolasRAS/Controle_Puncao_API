@@ -75,7 +75,8 @@ pt-BR:
         other: "Data:"
       try:
         one: Punção
-        other: "Punçãos:"
+        other: "Punção:"
+        o_plural: "Punções:"
       patient:
         one: Paciente
         other: "Pacinte:"
