@@ -18,6 +18,7 @@ en:
   link:
     new_worker: Register of Collectors
     new_obs: Register of Observations
+    new_record: Register of Records
     new_puncture: Register of Punctures
     report:
       one: Report
@@ -73,8 +74,10 @@ en:
         one: Date
         other: "Date:"
       try:
-        one: Try
-        other: "Try:"
+        one: Puncture
+        other: "Punctures:"
+        o_plural: "Punctures:"
+        try: Attempt
       patient:
         one: Patient
         other: "Patient:"
@@ -88,6 +91,9 @@ en:
       age_range:
         one: Age Range
         other: "Age Range:"
+      active:
+        one: Active
+        other: "Active:"
   controller:
     create:
       one: Created with success!
