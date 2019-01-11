@@ -2,15 +2,17 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.attribute.description.other')%></strong>
-  <%= @worker.description %>
-</p>
+<form>
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.description.one') %>
+    <%= text_field_tag nil, @worker.description, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.active.one') %>
+    <%= @worker.active ? check_box('a','b', {checked: true, disabled: true}) : check_box('a','b', {checked: false, disabled: true}) %>
+  </div>
+</form>
 
-<p>
-  <strong><%= t('view.attribute.active.other')%></strong>
-  <%= @worker.active ? check_box('a','b', {checked: true}) : check_box('a','b', {checked: false}) %>
-</p>
-
-<%= link_to t('link.edit'), edit_worker_path(@worker) %> |
-<%= link_to t('link.back'), workers_path %>
+<%= link_to t('link.edit'), edit_worker_path(@worker), class:"btn btn-primary", role:"button" %> 
+<%= link_to t('link.back'), workers_path, class:"btn btn-secondary", role:"button" %>

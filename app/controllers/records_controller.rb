@@ -9,7 +9,7 @@ class RecordsController < ApplicationController
     @i = 0
     @search = RecordSearch.new(params[:search])
     @records = @search.scope
-    @records = Record.all
+    @records = Record.all.order(id: :desc)
   end
   
   def index_search

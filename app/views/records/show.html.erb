@@ -1,36 +1,32 @@
 <h1><%= t('view.record.show')%></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.attribute.date_s.other')%></strong>
-  <%= l(@record.date_s) %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.protocol.other')%></strong>
-  <%= @record.protocol %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.patient.other')%></strong>
-  <%= @record.patient %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.age_range.other')%></strong>
-  <%= @record.age_range.description %>
-</p>
-
-
-<p>
-  <strong><%= t('view.attribute.age.other')%></strong>
-  <%= @record.age %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.try.o_plural') %></strong>
-  <%= @try %>
-</P>
+<form>
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.date_s.one') %>
+    <%= date_field_tag nil, @record.date_s, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.protocol.one') %>
+    <%= text_field_tag nil, @record.protocol, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.age_range.one') %>
+    <%= text_field_tag nil, @record.age_range.description, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.age.one') %>
+    <%= text_field_tag nil, @record.age, class:"form-control", disabled: true %>
+  </div>
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attempt.other') %>
+    <%= text_field_tag nil, @try, class:"form-control", disabled: true %>
+  </div>  
+</form>
 
 <table class="table table-hover">
   <thead>
@@ -39,6 +35,7 @@
       <th><%= t('view.attribute.d_puncture.one')%></th>
       <th><%= t('view.worker.one')%></th>
       <th><%= t('view.obs.one')%></th>
+      <th><%= t('view.attribute.try.try')%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -50,6 +47,7 @@
         <td><%= l(attempt.d_puncture) %></td>
         <td><%= attempt.worker.description %></td>
         <td><%= attempt.observation.description %></td>
+        <td><%= attempt.try %></td>
       </tr>
     <% end %>
   </tbody>

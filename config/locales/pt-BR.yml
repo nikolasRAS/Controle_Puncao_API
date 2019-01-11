@@ -77,6 +77,7 @@ pt-BR:
         one: Punção
         other: "Punção:"
         o_plural: "Punções:"
+        try: Tentativa
       patient:
         one: Paciente
         other: "Pacinte:"

@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Nome do Colaborador" %>
   </div>
   
-  <div class="field">
+  <div class="form-group">
     <%= form.label :active %>
     <%= form.check_box :active %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-primary" %>
+    <%= link_to t('link.back'), workers_path, class:"btn btn-secondary" %>
   </div>
-<% end %>
+  
+<% end %><br>

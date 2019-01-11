@@ -11,32 +11,33 @@
     </div>
   <% end %>
   
-  <div class="field">
+  <div class="form-group">
     <%= form.label :date_s %>
-    <%= form.date_select :date_s %>
+    <%= form.date_field :date_s, class:"form-control", placeholder:"#{l(Date.today)}" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :patient %>
-    <%= form.text_field :patient %>
+    <%= form.text_field :patient, class:"form-control", placeholder:"Ex.: Níkolas Ribeiro" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :protocol %>
-    <%= form.text_field :protocol %>
+    <%= form.text_field :protocol, class:"form-control", placeholder:"Ex.: 010221" %>
   </div>
   
-  <div class="field">
+  <div class="form-group">
     <%= form.label :age_range_id %>
-    <%= form.select("age_range_id", @age_range_options, {include_blank: t('view.attribute.select')}) %>
+    <%= form.select("age_range_id", @age_range_options, {include_blank: t('view.attribute.select')}, class:"form-control") %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :age %>
-    <%= form.number_field :age %>
+    <%= form.number_field :age, class:"form-control", placeholder:"Ex.: 25" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-primary" %>
+    <%= link_to t('link.back'), records_path, class:"btn btn-secondary" %>
   </div>
 <% end %>

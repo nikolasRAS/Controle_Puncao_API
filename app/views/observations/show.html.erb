@@ -1,10 +1,12 @@
 <h1><%= t('view.obs.show')%></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.attribute.description.other')%></strong>
-  <%= @observation.description %>
-</p>
-
-<%= link_to t('link.edit'), edit_observation_path(@observation) %> |
-<%= link_to t('link.back'), observations_path %>
+<form>
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.description.other') %>
+    <%= text_field_tag nil, @observation.description, class:"form-control", disabled: true %>
+  </div> 
+</form>
+<br>
+<%= link_to t('link.edit'), edit_observation_path(@observation), class:"btn btn-primary", role:"button" %>
+<%= link_to t('link.back'), observations_path, class:"btn btn-secondary", role:"button" %>

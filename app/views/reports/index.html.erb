@@ -10,5 +10,5 @@
 
 <br>
 <p><%= "Atualmente as datas estão definidas entre #{l(@search.date_from.to_date)} e #{l(@search.date_to.to_date)}" %></p>
-<%= link_to t('link.research_reports'), research_path(@search.date_from, @search.date_to), class:'btn btn-primary' %> |
+<%= link_to t('link.research_reports'), research_path(@search.date_from, @search.date_to), class:'btn btn-primary' %> 
 <%= link_to t('link.back'), welcome_index_path, class:'btn btn-secondary' %>

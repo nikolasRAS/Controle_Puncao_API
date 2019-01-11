@@ -1,25 +1,33 @@
 <h1><%= t('view.attempt.show')%></h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t('view.attribute.protocol.other')%></strong>
-  <%= @attempt.record.protocol %>
-</p>
+<form>
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.protocol.one') %>
+    <%= text_field_tag nil, @attempt.record.protocol, class:"form-control", disabled: true %>
+  </div> 
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.d_puncture.one') %>
+    <%= date_field_tag nil, @attempt.d_puncture, class:"form-control", disabled: true %>
+  </div> 
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.worker.one') %>
+    <%= text_field_tag nil, @attempt.worker.description, class:"form-control", disabled: true %>
+  </div> 
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.obs.one') %>
+    <%= text_field_tag nil, @attempt.observation.description, class:"form-control", disabled: true %>
+  </div> 
+  
+  <div class="form-goup">
+    <%= label_tag nil, t('view.attribute.try.one') %>
+    <%= text_field_tag nil, @attempt.try, class:"form-control", disabled: true %>
+  </div>   
+</form>
+<br>
 
-<p>
-  <strong><%= t('view.attribute.d_puncture.other')%></strong>
-  <%= l(@attempt.d_puncture) %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.worker.other')%></strong>
-  <%= @attempt.worker.description %>
-</p>
-
-<p>
-  <strong><%= t('view.attribute.observation.other')%></strong>
-  <%= @attempt.observation.description %>
-</p>
-
-<%= link_to t('link.edit'), edit_attempt_path(@attempt), class:"btn btn-primary", role:"button" %> |
+<%= link_to t('link.edit'), edit_attempt_path(@attempt), class:"btn btn-primary", role:"button" %> 
 <%= link_to t('link.back'), records_path, class:"btn btn-secondary", role:"button" %>

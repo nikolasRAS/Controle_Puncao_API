@@ -7,7 +7,7 @@ class AttemptsController < ApplicationController
   # GET /attempts
   # GET /attempts.json
   def index
-    @attempts = Attempt.all
+    @attempts = Attempt.all.order(id: :desc)
   end
 
   # GET /attempts/1
