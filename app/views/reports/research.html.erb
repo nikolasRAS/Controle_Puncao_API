@@ -1,11 +1,11 @@
-<h1 class="text-center"><%= "#{t('link.report.one')} referente ao período de #{l(params[:begin].to_date)} a #{l(params[:end].to_date)}" %></h1>
+<h1 class="text-center"><%= t('msg.report_3') << l(params[:begin].to_date) << t('msg.report_2') << l(params[:end].to_date) %></h1>
 
 <br>
 
 <table class="table table-hover text-center">
   <thead>
     <tr>
-      <th>Total</th>
+      <th><%= t('report.total') %></th>
       <th><%= @total %></th>
     </tr>
   </thead>
@@ -16,11 +16,11 @@
 <table class="table table-hover text-center">  
   <thead>
     <tr>
-      <th colspan="2">Punções por Faixa Etária</th>
+      <th colspan="2"><%= t('report.by_age_range') %></th>
     </tr>
     <tr>
-      <th >Faixa Etária</th>
-      <th >Quantidade</th>
+      <th><%= t('view.age_range.one') %></th>
+      <th><%= t('report.amount') %></th>
     </tr>
   </thead>
   <tbody>
@@ -38,11 +38,11 @@
 <table class="table table-hover text-center">
   <thead>
     <tr>
-      <th colspan="2">Punções por Colaborador</th>
+      <th colspan="2"><%= t('report.by_colector') %></th>
     </tr>
     <tr>
-      <th> <%= t('view.worker.other')%> </th>
-      <th>Quantidade de punções</th>
+      <th><%= t('view.worker.other')%></th>
+      <th><%= t('report.amount') %></th>
     </tr>
   </thead>
   <tbody>
@@ -57,6 +57,9 @@
 
 <table class="table table-hover text-center">
   <thead>
+    <tr>
+      <th colspan="6"><%= t('report.by_colector_2') %></th>
+    </tr>
     <tr>
       <th><%= t('view.worker.other')%> </th>
       <th>1ª</th>
@@ -83,11 +86,11 @@
 <table class="table table-hover text-center">
   <thead>
     <tr>
-      <th colspan="2">Punções por Observação</th>
+      <th colspan="2"><%= t('report.by_obs') %></th>
     </tr>
     <tr>
-      <th> <%= t('view.obs.other')%> </th>
-      <th>Quantidade de punções</th>
+      <th><%= t('view.obs.other') %></th>
+      <th><%= t('report.amount') %></th>
     </tr>
   </thead>
   <tbody>

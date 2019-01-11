@@ -1,5 +1,19 @@
 en:
 # Avulsos
+  msg:
+    welcome_1: "Register the colectors, observations and punctures, then check the results with our reports."
+    welcome_2: "To start, select one option below:"
+    report_1: "Currently, dates are set between "
+    report_2: " and "
+    report_3: "Report on the period between "
+  set_date: "Set Date"
+  report:
+    total: Total
+    by_age_range: Records by Age Range
+    by_obs: Records by Observation
+    by_colector: Records by Colector
+    by_colector_2: Punctures by Colector
+    amount: Amount
   puncture_controller:
     one: Puncture Control
     other: Puncture Control

@@ -1,5 +1,19 @@
 pt-BR:
 # Avulsos
+  msg:
+    welcome_1: "Cadastre os coletores, observações e punções, depois confira os resultados com os relatórios."
+    welcome_2: "Para começar, selecione uma das opções abaixo:"
+    report_1: "Atualmente, as datas estão definidas entre "
+    report_2: " e "
+    report_3: "Relatório referente ao período entre "
+  set_date: "Definir Data"
+  report:
+    total: Total
+    by_age_range: Registros por Faixa Etária
+    by_obs: Registros por Observação
+    by_colector: Registros por Coletor    
+    by_colector_2: Punções por Coletor    
+    amount: Quantidade    
   puncture_controller:
     one: Controle de Punção
     other: Controle de Punções

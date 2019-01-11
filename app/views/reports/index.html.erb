@@ -4,11 +4,11 @@
   <%= form_tag reports_path, method: :get do %>
     <%= text_field_tag 'search[date_from]', l(@search.date_from.to_date) %>
     <%= text_field_tag 'search[date_to]', l(@search.date_to.to_date) %>
-    <%= submit_tag 'Definir Datas', class: 'btn search_button' %>
+    <%= submit_tag t('set_date'), class: 'btn search_button' %>
   <% end %>  
 </div>
 
 <br>
-<p><%= "Atualmente as datas estão definidas entre #{l(@search.date_from.to_date)} e #{l(@search.date_to.to_date)}" %></p>
+<p><%= t('msg.report_1') << l(@search.date_from.to_date) << t('msg.report_2') << l(@search.date_to.to_date) %></p>
 <%= link_to t('link.research_reports'), research_path(@search.date_from, @search.date_to), class:'btn btn-primary' %> 
 <%= link_to t('link.back'), welcome_index_path, class:'btn btn-secondary' %>

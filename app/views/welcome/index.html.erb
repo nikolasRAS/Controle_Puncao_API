@@ -1,9 +1,9 @@
 <div class="jumbotron">
   <h1 class="display-4"><%= t('puncture_controller.other') %></h1>
   
-  <p class="lead">Cadastre os coletores, observações, punções e depois confira os resultados com os Relatórios.</p>
+  <p class="lead"><%= t('msg.welcome_1') %></p>
   <hr class="my-4">
-  <p>Para começar, selecione uma das opções abaixo:</p>
+  <p><%= t('msg.welcome_2') %></p>
 
   <%= link_to t('link.new_worker'), workers_path, class:"btn btn-primary btn-lg", role:"button" %></li>
   <%= link_to t('link.new_obs'), observations_path, class:"btn btn-primary btn-lg", role:"button" %></li>
